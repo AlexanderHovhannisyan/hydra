@@ -1,0 +1,36 @@
+@mixin flex ($justify, $align, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin techAnimation ($name) {
+    animation: $name 1s linear 1 forwards;
+    animation-delay: calc(var(--i) * 0.5s);
+}
+
+@mixin activeBurgerConstructor($position) {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: $position;
+    border-radius: 20px;
+    width: 100%;
+    height: 10%;
+    background:linear-gradient(to right,#8176AF,#C0B7E8 );
+    transition: .5s;
+
+}
+
+@mixin inactiveBurgerConstructor($position, $rotate) {
+    content: '';
+    position: absolute;
+    transform: translateY(-50%) rotate($rotate);
+    top: $position;
+    border-radius: 20px;
+    width: 100%;
+    height: 10%;
+    background:#C0B7E8;
+    transition: .5s;
+}
